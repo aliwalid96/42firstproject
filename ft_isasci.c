@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_isasci.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amuhsen <amuhsen@student.42amman.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/01 12:53:45 by amuhsen           #+#    #+#             */
-/*   Updated: 2024/09/02 12:53:27 by amuhsen          ###   ########.fr       */
+/*   Created: 2024/09/01 12:19:21 by amuhsen           #+#    #+#             */
+/*   Updated: 2024/09/02 12:45:58 by amuhsen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<stddef.h>
 
-size_t	ft_strlen(const char *s)
+int	ft_isascii(int c)
 {
-	size_t	i;
-
-	i = 0;
-	while (*s)
-	{	
-		i++;
-	}
-	return (i);
+	if ((c >= 0 && c <= 127))
+		return (1);
+	else
+		return (0);
 }
