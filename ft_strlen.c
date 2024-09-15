@@ -9,7 +9,8 @@
 /*   Updated: 2024/09/02 12:53:27 by amuhsen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<stddef.h>
+
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
@@ -17,8 +18,9 @@ size_t	ft_strlen(const char *s)
 
 	i = 0;
 	while (*s)
-	{	
+	{
 		i++;
+		s++;
 	}
 	return (i);
 }

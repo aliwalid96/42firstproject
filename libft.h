@@ -6,14 +6,19 @@
 /*   By: amuhsen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 12:58:37 by amuhsen           #+#    #+#             */
-/*   Updated: 2024/09/02 12:59:35 by amuhsen          ###   ########.fr       */
+/*   Updated: 2024/09/09 14:02:08 by amuhsen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 #define LIBFT_H
 
-int	isalpha(int c);
+#include <stddef.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdio.h>
+
+int     ft_isalpha(int c);
 int	ft_isdigit(int c);
 int	ft_toupper(int c);
 int	ft_tolower(int c);
