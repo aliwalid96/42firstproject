@@ -1,16 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strncmp.c                                          :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amuhsen <amuhsen@student.42amman.com>      +#+  +:+       +#+        */
+/*   By: amuhsen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/15 11:39:34 by amuhsen           #+#    #+#             */
-/*   Updated: 2024/09/17 13:15:45 by amuhsen          ###   ########.fr       */
+/*   Created: 2024/09/22 21:31:41 by amuhsen           #+#    #+#             */
+/*   Updated: 2024/09/22 21:42:28 by amuhsen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -27,5 +25,3 @@ int strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-
-

@@ -1,31 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strncmp.c                                          :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amuhsen <amuhsen@student.42amman.com>      +#+  +:+       +#+        */
+/*   By: amuhsen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/15 11:39:34 by amuhsen           #+#    #+#             */
-/*   Updated: 2024/09/17 13:15:45 by amuhsen          ###   ########.fr       */
+/*   Created: 2024/09/22 21:49:53 by amuhsen           #+#    #+#             */
+/*   Updated: 2024/09/22 21:50:35 by amuhsen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int strncmp(const char *s1, const char *s2, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 
-	i = 0;
-	while ((s1[i] != '\0' || s2[i] != '\0') && i < n)
+	if (src < dest)
 	{
-		if (!(s1[i] == s2[i]))
+		i = n;
+		while (i > 0)
 		{
-			return (s1[i] - s2[i]);
+			i--;
+			((char *)dest)[i] = ((char *)src)[i];
 		}
-		i++;
 	}
-	return (0);
+	else if (src > dest)
+	{
+		i = 0;
+		while (i < n)
+		{
+			((char *)dest)[i] = ((char *)src)[i];
+			i++;
+		}
+	}
+	return (dest);
 }
-
-
