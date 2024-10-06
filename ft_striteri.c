@@ -1,40 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amuhsen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/22 21:58:43 by amuhsen           #+#    #+#             */
-/*   Updated: 2024/09/22 22:51:56 by amuhsen          ###   ########.fr       */
+/*   Created: 2024/10/06 22:07:27 by amuhsen           #+#    #+#             */
+/*   Updated: 2024/10/06 22:08:16 by amuhsen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(const char *nptr)
+#include "libft.h"
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	int	i;
-	int	result;
-	int	sign;
 
 	i = 0;
-	sign = 1;
-	result = 0;
-	while (nptr[i] == 32 || (nptr[i] >= 9 && nptr[i] <= 13))
-		i++;
-	if (nptr[i] == '-')
+	while (*s)
 	{
-		sign *= -1;
+		f(i, s);
+		s++;
 		i++;
 	}
-	else if (nptr[i] == '+')
-		i++;
-	if (nptr[i] == '+' || nptr[i] == '-')
-		return (0);
-	while (nptr[i] != '\0' && nptr[i] >= '0' && nptr[i] <= '9')
-	{
-		result *= 10;
-		result += nptr[i] - '0';
-		i++;
-	}
-	return (result * sign);
 }

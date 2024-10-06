@@ -6,12 +6,14 @@
 /*   By: amuhsen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 21:45:32 by amuhsen           #+#    #+#             */
-/*   Updated: 2024/09/22 21:46:48 by amuhsen          ###   ########.fr       */
+/*   Updated: 2024/10/06 22:17:35 by amuhsen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void *memcpy(void *dest, const void *src, size_t n)
-	{
+#include <stddef.h>
+
+void	*ft_memcpy(void *dest, const void *src, size_t n)
+{
 	char		*dest_1;
 	const char	*src_1;
 	size_t		i;
