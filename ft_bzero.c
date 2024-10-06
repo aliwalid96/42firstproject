@@ -6,7 +6,7 @@
 /*   By: amuhsen <amuhsen@student.42amman.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 14:17:01 by amuhsen           #+#    #+#             */
-/*   Updated: 2024/09/22 21:18:17 by amuhsen          ###   ########.fr       */
+/*   Updated: 2024/10/06 23:23:07 by amuhsen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_bzero(void *s, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (i < n)
